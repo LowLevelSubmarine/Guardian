@@ -21,7 +21,7 @@ public class InfoAlert extends GuardianAlert {
         DialogPane dialogPane = this.getDialogPane();
         dialogPane.getChildren().setAll(root);
         dialogPane.setPrefWidth(560);
-        dialogPane.setPrefHeight(440);
+        dialogPane.setPrefHeight(510);
         ImageView logo = new ImageView(new Image(VersionInfo.PROJECT_LOGO));
         Text version = new Text("Version: " + VersionInfo.VERSION_NUMBER + " - " + VersionInfo.VERSION_TITLE);
         version.setWrappingWidth(500);
@@ -33,7 +33,8 @@ public class InfoAlert extends GuardianAlert {
                 "All the passwords are stored encrypted on your hard drive. " +
                 "The encryption process ensures that the only way to get stored passwords back is by decrypting it with the key it was encrypted with. " +
                 "To ensure your passwords are stored safely, only link randomly generated passwords with your key. " +
-                "DO NOT store sensitive information inside the text area, considering only the passwords are stored encrypted due to safety reasons.");
+                "DO NOT store sensitive information inside the text area, considering only the passwords are stored encrypted due to safety reasons.\n\n" +
+                "Guardian is developed by Florian Weichert. The projects source code can be found on " + VersionInfo.URL_GITHUB + ".");
         text.setWrappingWidth(500);
         text.setTextAlignment(TextAlignment.JUSTIFY);
         text.setFont(new Font(17));
